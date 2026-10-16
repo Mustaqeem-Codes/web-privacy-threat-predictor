@@ -1,0 +1,85 @@
+# ==========================================
+# 🔐 CRITICAL SECURITY (Credentials & Keys)
+# ==========================================
+# Never commit secrets, tokens, or environment files!
+.env
+.env.local
+.env.*.local
+*.env
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.pfx
+credentials.json
+client_secret*.json
+config.json
+secret.json
+secrets/
+.vault/
+
+# ==========================================
+# 📊 DATA, CRAWLERS & MACHINE LEARNING
+# ==========================================
+# Large datasets, raw crawl outputs, and model weights
+data/
+!data/README.md       # Keep the README if you want to describe the directory structure
+*.csv
+*.jsonl
+*.parquet
+*.h5
+*.pkl
+*.pickle
+*.pt
+*.pth
+*.onnx
+*.pb
+*.tflite
+downloads/
+cache/
+.cache/
+.ipynb_checkpoints/
+
+# ==========================================
+# 🐍 PYTHON / BACKEND & CRAWLER DEPENDENCIES
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ==========================================
+# 📦 JAVASCRIPT / FRONTEND & EXTENSION
+# ==========================================
+node_modules/
+/frontend/dist/
+/frontend/build/
+/extension/dist/
+/extension/build/
+.npm
+.eslintcache
+.parcel-cache
+.turbo/
+
+# ==========================================
+# 💻 OS / IDE SPECIFIC
+# ==========================================
+.DS_Store
+.DS_Store?
+ehthumbs.db
+Thumbs.db
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
