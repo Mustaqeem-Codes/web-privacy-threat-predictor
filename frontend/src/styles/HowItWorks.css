@@ -1,0 +1,112 @@
+.how-it-works {
+  padding-block: var(--section-pad-y);
+  background-color: var(--color-surface-2);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.how-it-works__container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.how-it-works__title {
+  color: var(--color-text);
+  text-align: center;
+}
+
+.how-it-works__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.how-it-works__item {
+  display: flex;
+}
+
+.how-it-works__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  background-color: var(--color-surface);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  width: 100%;
+  transition: box-shadow var(--transition-fast);
+}
+
+.how-it-works__card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.how-it-works__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.how-it-works__icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-brand-soft);
+  color: var(--color-brand);
+  border-radius: var(--radius-md);
+}
+
+.how-it-works__number {
+  font-family: var(--font-family-mono);
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--color-border);
+  line-height: 1;
+}
+
+.how-it-works__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.how-it-works__step-title {
+  color: var(--color-text);
+  font-size: var(--text-lg);
+}
+
+.how-it-works__description {
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .how-it-works__list {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  
+  .how-it-works__item {
+    flex: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .how-it-works__container {
+    gap: var(--space-12);
+  }
+  
+  .how-it-works__card {
+    padding: var(--space-8);
+  }
+}

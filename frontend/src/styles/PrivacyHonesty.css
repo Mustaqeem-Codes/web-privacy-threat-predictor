@@ -1,0 +1,126 @@
+.privacy-honesty {
+  padding-block: var(--section-pad-y);
+  background-color: var(--color-bg);
+}
+
+.privacy-honesty__container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.privacy-honesty__title {
+  color: var(--color-text);
+  text-align: center;
+}
+
+.privacy-honesty__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  width: 100%;
+  max-width: 900px;
+}
+
+.privacy-honesty__card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+}
+
+.privacy-honesty__card-title {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-4);
+  color: var(--color-text);
+}
+
+.privacy-honesty__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: 0;
+  margin: 0;
+}
+
+.privacy-honesty__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+}
+
+.privacy-honesty__icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.privacy-honesty__icon--keep {
+  color: var(--verdict-safe-text);
+}
+
+/* Avoiding threatening red for standard non-collection facts to maintain calm trust */
+.privacy-honesty__icon--never {
+  color: var(--color-text-muted); 
+}
+
+.privacy-honesty__limits {
+  width: 100%;
+  max-width: 900px;
+  background-color: var(--color-brand-soft);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.privacy-honesty__limits-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.privacy-honesty__limits-icon {
+  color: var(--color-brand);
+}
+
+.privacy-honesty__limits-title {
+  font-size: var(--text-lg);
+  color: var(--color-text);
+  margin: 0;
+}
+
+.privacy-honesty__limits-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  padding-left: var(--space-6);
+  color: var(--color-text);
+  margin: 0;
+}
+
+.privacy-honesty__limits-list li {
+  font-size: var(--text-sm);
+  line-height: var(--line-height-body);
+}
+
+@media (min-width: 768px) {
+  .privacy-honesty__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .privacy-honesty__limits {
+    padding: var(--space-8);
+  }
+  
+  .privacy-honesty__limits-list {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 0;
+    gap: var(--space-4);
+  }
+}

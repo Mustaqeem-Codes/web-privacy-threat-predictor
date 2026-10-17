@@ -1,0 +1,22 @@
+{
+  "scanId": "6660a1d5e2f4",
+  "domain": "example.com",
+  "verdict": "threat",
+  "probability": 0.91,
+  "uncertain": false,
+  "reasons": [
+    {
+      "feature": "net_unique_third",
+      "value": 23,
+      "impact": 0.34,
+      "direction": "increases_risk"
+    },
+    {
+      "feature": "tp_canvas_reads",
+      "value": 2,
+      "impact": 0.21,
+      "direction": "increases_risk"
+    }
+  ],
+  "modelVersion": "rf-2026-10-v1"
+}

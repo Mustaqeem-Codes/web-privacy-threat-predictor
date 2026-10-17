@@ -1,0 +1,99 @@
+.verdict-levels {
+  padding-block: var(--section-pad-y);
+  background-color: var(--color-bg);
+}
+
+.verdict-levels__container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  align-items: center;
+  text-align: center;
+}
+
+.verdict-levels__title {
+  color: var(--color-text);
+  max-width: 25ch;
+}
+
+.verdict-levels__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  width: 100%;
+  max-width: 400px; /* Constrain single column on mobile */
+  text-align: left;
+}
+
+.verdict-levels__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  border: 1px solid transparent; /* reserved for high contrast fallback */
+}
+
+.verdict-levels__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.verdict-levels__label {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  margin: 0;
+}
+
+.verdict-levels__description {
+  font-size: var(--text-base);
+  margin: 0;
+  color: inherit; /* inherit ensures high contrast on tinted backgrounds */
+  opacity: 0.9;
+}
+
+/* Specific state coloring relying exclusively on global semantic tokens */
+.verdict-levels__card--safe {
+  background-color: var(--verdict-safe-bg);
+  color: var(--verdict-safe-text);
+  border-color: rgba(27, 107, 58, 0.15); /* Subdued border using safe-text color */
+}
+
+.verdict-levels__card--suspicious {
+  background-color: var(--verdict-warn-bg);
+  color: var(--verdict-warn-text);
+  border-color: rgba(138, 83, 0, 0.15); /* Subdued border using warn-text color */
+}
+
+.verdict-levels__card--threat {
+  background-color: var(--verdict-threat-bg);
+  color: var(--verdict-threat-text);
+  border-color: rgba(166, 27, 27, 0.15); /* Subdued border using threat-text color */
+}
+
+.verdict-levels__footer-note {
+  margin-top: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+  font-weight: 500;
+  max-width: 50ch;
+}
+
+@media (min-width: 768px) {
+  .verdict-levels__grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1000px;
+    gap: var(--space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .verdict-levels__container {
+    gap: var(--space-10);
+  }
+  
+  .verdict-levels__card {
+    padding: var(--space-8);
+  }
+}
